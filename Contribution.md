@@ -16,4 +16,3 @@
 
 1. Rifat Karim
 2. Albert Guo
-3. 
