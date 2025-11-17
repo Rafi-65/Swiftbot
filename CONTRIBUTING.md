@@ -1,4 +1,4 @@
-# Contribution
+le# Contribution
 
 1. Follow Java coding conventions
 2. Write comprehensive unit tests
@@ -16,10 +16,10 @@
 
 1. Rifat Karim
 2. Albert Guo
-3.
-4.
-5.
-6.
+3. Muhammed Olafusi
+4. Yahya Uddin
+5. Dean Gijohn
+6. sakariye iman
 7.
 8.
 9.
