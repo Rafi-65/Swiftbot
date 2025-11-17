@@ -19,7 +19,7 @@ le# Contribution
 3. Muhammed Olafusi
 4. Yahya Uddin
 5. Dean Gijohn
-6. sakariye iman
+6. Sakariye Iman
 7.
 8.
 9.
