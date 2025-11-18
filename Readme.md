@@ -122,8 +122,29 @@ Run unit tests using JUnit:
 # Run all tests
 mvn test
 
-# Run specific test class
-mvn test -Dtest=SwiftbotControllerTest
+# Run specific LED test
+mvn test -Dtest=RandomLEDTest
+```
+
+#### Available Test Classes
+
+- **RandomLEDTest**: Tests LED random blinking functionality
+  - Verifies LED turns ON and OFF randomly
+  - Uses Mockito for hardware simulation
+  - Ensures proper LED state changes
+
+#### LED Testing
+
+The RandomLEDTest class validates the LED control functionality:
+
+```java
+// Test random LED blinking
+@Test
+public void testRandomBlink() {
+    // Simulates LED hardware behavior
+    // Verifies random ON/OFF patterns
+    // Ensures proper LED state management
+}
 ```
 
 ### Integration Tests
