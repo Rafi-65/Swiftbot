@@ -44,62 +44,47 @@ This project is part of a Java group project for controlling and programming the
 
 ## Project Structure
 
+When you upload the project to the Pi, it should look like this:
+
 ```
 Swiftbot/
-├── src/                    # Source code directory
-│   ├── main/              # Main application code
-│   │   ├── java/          # Java source files
-│   │   └── resources/     # Configuration files
-│   └── test/              # Test code
-├── docs/                  # Documentation
-├── lib/                   # External libraries
-└── README.md              # This file
+├── SimonGame.java         # Main game source code
+├── swiftbot_API/          # Library folder
+│   └── SwiftBot-API-6.0.0.jar
+└── Readme.md             # This file
 ```
 
 ## Usage
 
-### Basic Operations
+### Prerequisites
 
-1. **Robot Movement**: Control forward, backward, left, and right movement
-2. **Sensor Reading**: Access data from proximity, light, and other sensors
-3. **LED Control**: Manage LED indicators and displays
-4. **Sound Output**: Generate audio feedback and alerts
+- **Java Development Kit (JDK)**: Ensure JDK 11 or higher is installed on your Raspberry Pi.
+- **SwiftBot Library**: The `SwiftBot-API-6.0.0.jar` file must be present in the `swiftbot_API` folder.
+- **Hardware**: A SwiftBot robot with a Raspberry Pi.
 
 ### Running the Application
 
-```bash
-# Compile the project
-javac -cp .:lib/* src/main/java/*.java
+1.  **Transfer the files** to your Raspberry Pi.
+2.  **Open a terminal** on the Pi and navigate to the project folder.
+3.  **Compile** the code:
+    ```bash
+    javac -cp swiftbot_API/SwiftBot-API-6.0.0.jar SimonGame.java
+    ```
+4.  **Run** the game:
+    ```bash
+    java -cp ".:swiftbot_API/SwiftBot-API-6.0.0.jar" SimonGame
+    ```
 
-# Run the main application
-java -cp .:lib/* com.swiftbot.Main
-```
+## Game Instructions
 
-## API Documentation
-
-### Core Classes
-
-- **SwiftbotController**: Main controller for robot operations
-- **SensorManager**: Handles all sensor interactions
-- **MovementController**: Manages robot movement and navigation
-- **CommunicationHandler**: Handles USB communication with the robot
-
-### Key Methods
-
-```java
-// Movement control
-swiftbot.moveForward(speed);
-swiftbot.turnLeft(degrees);
-swiftbot.stop();
-
-// Sensor reading
-int proximity = sensorManager.getProximityReading();
-double lightLevel = sensorManager.getLightLevel();
-
-// LED control
-ledController.setColor(255, 0, 0); // Red
-ledController.blink(1000); // Blink every 1 second
-```
+1.  The SwiftBot will show a sequence of colours using its underlights and button lights.
+2.  Repeat the sequence by pressing the corresponding buttons:
+    *   **A** = Red
+    *   **B** = Green
+    *   **X** = Blue
+    *   **Y** = Yellow
+3.  If you get it right, the sequence gets longer!
+4.  If you get it wrong, the game ends and shows your score.
 
 ## Configuration
 
@@ -124,18 +109,6 @@ Test robot connectivity and basic operations:
 
 ## Troubleshooting
 
-### Common Issues
-
-1. **Connection Failed**: Check USB cable and port
-2. **Sensor Not Responding**: Verify sensor connections and calibration
-3. **Movement Issues**: Check motor connections and power supply
-4. **Compilation Errors**: Verify JDK version and dependencies
-
-### Debug Mode
-
-Enable debug mode to get detailed logging:
-
-```java
-// Enable debug logging
-System.setProperty("swiftbot.debug", "true");
-```
+1.  **"Could not find or load main class SimonGame"**: Make sure you compiled the code first and are running the `java` command from the correct folder.
+2.  **"package swiftbot does not exist"**: Ensure the `swiftbot_API` folder contains the JAR file and you are using the correct `-cp` flag.
+3.  **"This program must run on a Raspberry Pi"**: This code requires the SwiftBot hardware and cannot run on a regular computer (Mac/PC).
