@@ -1,5 +1,3 @@
-package cs1603;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -30,7 +28,7 @@ public class SimonGame {
 
         int score = 0;
         int round = 1;
-        List<String> sequence = new ArrayList<>();
+        ArrayList<String> sequence = new ArrayList<>();
 
         // main game loop
         while (true) {
@@ -64,7 +62,7 @@ public class SimonGame {
                 armButtonsForChoice();
 
                 while (lastPress == null) {
-                    Thread.sleep(5);
+                    Thread.sleep(10);
                 }
 
                 if (lastPress == 'B') {
