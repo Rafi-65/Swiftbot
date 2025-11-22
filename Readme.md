@@ -44,16 +44,14 @@ This project is part of a Java group project for controlling and programming the
 
 ## Project Structure
 
+When you upload the project to the pi, it should look like this:
+
 ```
-Swiftbot/
-├── src/                    # Source code directory
-│   ├── main/              # Main application code
-│   │   ├── java/          # Java source files
-│   │   └── resources/     # Configuration files
-│   └── test/              # Test code
-├── docs/                  # Documentation
-├── lib/                   # External libraries
-└── README.md              # This file
+~/projects/Swiftbot/
+├─ SimonGame.java.        # Source code file
+├─ swiftbot/
+│   └─ SwiftBot-API-6.0.0.jar
+└─ Readme.md           # This file
 ```
 
 ## Usage
@@ -68,11 +66,11 @@ Swiftbot/
 ### Running the Application
 
 ```bash
-# Compile the project
-javac -cp .:lib/* src/main/java/*.java
+# On the Pi, inside the project directory
+javac -cp swiftbot_API/SwiftBot-API-6.0.0.jar SimonGame.java
 
 # Run the main application
-java -cp .:lib/* com.swiftbot.Main
+java -cp ".:swiftbot_API/SwiftBot-API-6.0.0.jar" SimonGame
 ```
 
 ## API Documentation
@@ -111,5 +109,5 @@ Test robot connectivity and basic operations:
 1. **Connection Failed**: Check USB cable and port
 2. **Sensor Not Responding**: Verify sensor connections and calibration
 3. **Movement Issues**: Check motor connections and power supply
-4. **Compilation Errors**: Verify JDK version and dependencies
+4. **Compilation Errors**: Verify JDK version and dependencies. Note that it won't work only on the Raspberry Pi.
 
