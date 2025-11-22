@@ -84,24 +84,6 @@ java -cp .:lib/* com.swiftbot.Main
 - **MovementController**: Manages robot movement and navigation
 - **CommunicationHandler**: Handles USB communication with the robot
 
-### Key Methods
-
-```java
-// Movement control
-swiftbot.moveForward(speed);
-swiftbot.turnLeft(degrees);
-swiftbot.stop();
-
-// Sensor reading
-int proximity = sensorManager.getProximityReading();
-double lightLevel = sensorManager.getLightLevel();
-
-// LED control
-ledController.setColor(255, 0, 0); // Red
-ledController.blink(1000); // Blink every 1 second
-```
-
-## Configuration
 
 ### Robot Settings
 
@@ -131,11 +113,3 @@ Test robot connectivity and basic operations:
 3. **Movement Issues**: Check motor connections and power supply
 4. **Compilation Errors**: Verify JDK version and dependencies
 
-### Debug Mode
-
-Enable debug mode to get detailed logging:
-
-```java
-// Enable debug logging
-System.setProperty("swiftbot.debug", "true");
-```
