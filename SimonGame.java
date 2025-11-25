@@ -28,7 +28,7 @@ public class SimonGame {
 
         int score = 0;
         int round = 1;
-        ArrayList<String> sequence = new ArrayList<>();
+        List<String> sequence = new ArrayList<>();
 
         // main game loop
         while (true) {
@@ -62,7 +62,7 @@ public class SimonGame {
                 armButtonsForChoice();
 
                 while (lastPress == null) {
-                    Thread.sleep(10);
+                    Thread.sleep(5);
                 }
 
                 if (lastPress == 'B') {
